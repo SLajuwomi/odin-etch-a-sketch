@@ -9,7 +9,6 @@ while (i < 16) {
   let j = 0;
   while (j < 16) {
     const origColDiv = document.createElement("div");
-    origColDiv.textContent = "|";
     origColDiv.className = "column";
     origRowDiv.appendChild(origColDiv);
     j++;
@@ -76,7 +75,6 @@ function changeGrid() {
       let j = 0;
       while (j < gridVar) {
         const newColDiv = document.createElement("div");
-        newColDiv.textContent = "|";
         newColDiv.className = "column";
         newRowDiv.appendChild(newColDiv);
         j++;
@@ -108,3 +106,15 @@ randomColorButton.addEventListener("click", () => {
   useRandomColors = true;
   alert("Random colors are now turned on!");
 })
+
+const clearButton = document.querySelector(".clear")
+clearButton.addEventListener("click", clearScreen)
+
+function clearScreen() {
+  const columns = document.querySelectorAll(".column")
+  columns.forEach((column) => {
+    column.removeAttribute("style")
+  })
+}
+
+
