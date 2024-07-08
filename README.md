@@ -13,3 +13,5 @@ Created a online version of the old school game Etch-a-Sketch
  - How to remove attributes in JavaScript
  - How to confine elements to designated container with CSS Flexbox
  - How to create a grid with CSS Flexbox
+
+Note: this works best in incognito mode, or with no browser extensions enabled.
