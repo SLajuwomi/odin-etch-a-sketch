@@ -20,6 +20,8 @@ while (i < 16) {
 
 function attachEventListeners(desiredColor) {
   const rows = document.querySelectorAll(".row");
+  useRandomColors = false
+  console.log(useRandomColors)
 
   rows.forEach((row) => {
     row.addEventListener("mouseover", (event) => {
