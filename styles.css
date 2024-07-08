@@ -17,3 +17,7 @@ body {
     padding: 1rem 0;
     flex: 1;
 }
+
+button {
+    margin: 10px;
+}
