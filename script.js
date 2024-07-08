@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+let useRandomColors = false;
 
 let i = 0;
 
@@ -24,7 +25,13 @@ function attachEventListeners(desiredColor) {
   rows.forEach((row) => {
     row.addEventListener("mouseover", (event) => {
       if (event.altKey) {
-        if (desiredColor) {
+        if (useRandomColors) {
+          const randomRed = Math.floor(Math.random() * 255);
+          const randomGreen = Math.floor(Math.random() * 255);
+          const randomBlue = Math.floor(Math.random() * 255);
+          event.target.style.backgroundColor =
+            "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
+        } else if (desiredColor) {
           event.target.style.backgroundColor = desiredColor;
         } else {
           event.target.style.backgroundColor = "#A9A9A9";
@@ -91,5 +98,13 @@ function changeColor() {
     "Enter the new color you want squares to change to: "
   );
 
-  attachEventListeners(desiredColor)
+  attachEventListeners(desiredColor);
 }
+
+const randomColorButton = document.querySelector(".random");
+
+
+randomColorButton.addEventListener("click", () => {
+  useRandomColors = true;
+  alert("Random colors are now turned on!");
+})
