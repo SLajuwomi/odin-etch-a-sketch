@@ -18,13 +18,17 @@ while (i < 16) {
   i++;
 }
 
-function attachEventListeners() {
+function attachEventListeners(desiredColor) {
   const rows = document.querySelectorAll(".row");
 
   rows.forEach((row) => {
     row.addEventListener("mouseover", (event) => {
       if (event.altKey) {
-        event.target.style.backgroundColor = "#A9A9A9";
+        if (desiredColor) {
+          event.target.style.backgroundColor = desiredColor;
+        } else {
+          event.target.style.backgroundColor = "#A9A9A9";
+        }
       }
 
       if (event.ctrlKey) {
@@ -78,3 +82,14 @@ function changeGrid() {
   attachEventListeners();
 }
 
+const colorButton = document.querySelector(".changeColor");
+
+colorButton.addEventListener("click", changeColor);
+
+function changeColor() {
+  const desiredColor = prompt(
+    "Enter the new color you want squares to change to: "
+  );
+
+  attachEventListeners(desiredColor)
+}
