@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    background-color: lightgray;
+    padding: 1rem 0;
+    flex: 1;
+}
