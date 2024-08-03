@@ -2,7 +2,7 @@
 
 Created a online version of the old school game Etch-a-Sketch
 
-![Etch-a-Sketch](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Taj_Mahal_drawing_on_an_Etch-A-Sketch.jpg/800px-Taj_Mahal_drawing_on_an_Etch-A-Sketch.jpg)
+https://github.com/user-attachments/assets/71bdfdd4-2105-4d24-af00-39dcfaa69dbe
 
 ### What I Learned
 
